@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,16 +28,16 @@ public class ProfileView implements Initializable {
 
     private Student student;
 
+    private Scene scene;
+    private Stage stage;
+    private Parent root;
+
     // Setter method to receive the Student object
     public void setStudent(Student student) {
         this.student = student;
-
-        /*
-        if (student.getCourseName().equalsIgnoreCase("Computer Systems Engineering")) {
-            course_name.setS
-        }*/
+        System.out.println("========>" + student.getName());
         res.setText(student.getResName());
-        name.setText(student.getName().toUpperCase().charAt(0) + " " + student.getSurname().toUpperCase());
+        name.setText(student.getName().toUpperCase().substring(0,1) + " " + student.getSurname().toUpperCase());
         course_name.setText(student.getCourseName().toUpperCase());
         stud_number.setText(String.valueOf(student.getStudentNumber()));
     }
@@ -50,9 +51,9 @@ public class ProfileView implements Initializable {
     }
 
     public void switchToHelloScreen(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+        root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }

@@ -1,14 +1,13 @@
 package prospermpuru.studentregistrationapp;
 
-import java.io.*;
 import java.util.ArrayList;
 
 public class Logic {
-    private final ArrayList<Student> list = new ArrayList<>();
-    private int index;
+    private ArrayList<Student> list = new ArrayList<>();
 
-    public Logic() throws IOException {
+    public Logic() {
         //must load list from a file and add to the list arraylist
+<<<<<<< HEAD
         File file = new File("students.txt");
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         String str = "";
@@ -52,6 +51,8 @@ public class Logic {
                 list.get(index).getPassword(),
                 list.get(index).getResName()
         );
+=======
+>>>>>>> parent of f894385 (Added Registration Logic)
     }
 
     //checks if the student is registered or not
