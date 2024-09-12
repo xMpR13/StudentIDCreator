@@ -26,4 +26,4 @@ The **Student Registration App** is a JavaFX-based application designed to manag
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/student-registration-app.git
+   git clone https://github.com/xMpR13/student-registration-app.git
