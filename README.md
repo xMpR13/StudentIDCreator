@@ -23,6 +23,13 @@ The **Student Registration App** is a JavaFX-based application designed to manag
 - Java Development Kit (JDK) 11 or higher
 - JavaFX SDK
 
+Student picture -> Student icons created by Freepik - Flaticon <br>
+Student picture 2 -> University icons created by Freepik - Flaticon<br>
+Sign up -> Sign up icons created by Flat Icons - Flaticon<br>
+Student picture 3 -> University icons created by Freepik - Flaticon<br>
+Bar code -> Mark PNGs by Vecteezy<br>
+
+
 ## How to Run
 1. Clone the repository:
    ```bash
