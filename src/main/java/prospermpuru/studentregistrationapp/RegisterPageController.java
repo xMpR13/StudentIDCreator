@@ -7,10 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.BufferedWriter;
@@ -56,6 +53,7 @@ public class RegisterPageController implements Initializable {
             "OFF CAMPUS"
     };
     private Student student;
+    private final Alert alert = new Alert(Alert.AlertType.NONE);
 
     public RegisterPageController() {
     }
@@ -85,13 +83,17 @@ public class RegisterPageController implements Initializable {
         //debug purposes
         //checks if the student is on the list, if the student is not found on the list then registers else not register
         if (logic.checkRegistered(student)) {
-            System.out.println("already registered");
+            alert.setAlertType(Alert.AlertType.WARNING);
+            alert.setTitle("Login Error");
+            //alert.setHeaderText("Stunted");
+            alert.setContentText("The student number has been registered.");
+            alert.showAndWait();
         } else {
             switchToProfileScreen(event);
             System.out.println("registered");
         }
 
-        switchToProfileScreen(event);
+
     }
 
     //gets a res name from the combo box
