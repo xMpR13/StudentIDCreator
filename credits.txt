@@ -3,3 +3,5 @@ Student picture -> <a href="https://www.flaticon.com/free-icons/student" title="
 student picture 2 -> <a href="https://www.flaticon.com/free-icons/university" title="university icons">University icons created by Freepik - Flaticon</a>
 
 sign up -> <a href="https://www.flaticon.com/free-icons/sign-up" title="sign up icons">Sign up icons created by Flat Icons - Flaticon</a>
+student picture 3 -> <a href="https://www.flaticon.com/free-icons/university" title="university icons">University icons created by Freepik - Flaticon</a>
+bar code -> <a href="https://www.vecteezy.com/free-png/mark">Mark PNGs by Vecteezy</a>
