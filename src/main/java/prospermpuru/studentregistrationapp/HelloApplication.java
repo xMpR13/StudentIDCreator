@@ -15,7 +15,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("DAMSCA!");
         stage.setScene(scene);
-        stage.setAlwaysOnTop(true);
+        //stage.setAlwaysOnTop(true);
         stage.setResizable(false);
         stage.show();
     }

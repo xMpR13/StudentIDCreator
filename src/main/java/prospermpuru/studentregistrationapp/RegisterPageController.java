@@ -12,6 +12,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,18 +30,31 @@ public class RegisterPageController implements Initializable {
     @FXML
     private TextField studentNumberTextField;
     @FXML
-    private TextField courseTextField;
-    @FXML
     private PasswordField passwordTextField;
 
     @FXML
     private ComboBox<String> comboBox;
+    @FXML
+    private ComboBox<String> comboBoxCourses;
 
-    private Scene scene;
-    private Stage stage;
-    private Parent root;
     private String resName;
-    private String[] reses = {"SOSH 1", "SOSH 2", "SOSH 3", "SOSH 4", "SOSH 5", "OFF CAMPUS"};
+    private String courseName;
+    private final String[] courses = {
+            "Computer Science",
+            "Comp Systems Eng",
+            "Informatics",
+            "Information Techn",
+            "Multimedia Comp"
+
+    };
+    private final String[] reses = {
+            "SOSH 1",
+            "SOSH 2",
+            "SOSH 3",
+            "SOSH 4",
+            "SOSH 5",
+            "OFF CAMPUS"
+    };
     private Student student;
 
     public RegisterPageController() {
@@ -49,26 +66,32 @@ public class RegisterPageController implements Initializable {
         student = new Student(fullNamesTextField.getText(),
                 surnameTextField.getText(),
                 Integer.parseInt(studentNumberTextField.getText()),
-                courseTextField.getText(),
+                courseName,
                 passwordTextField.getText(),
                 resName
         );
 
-        System.out.println(resName);
 
+        //save students who have registered to a file
+        File file = new File("students.txt");
+        BufferedWriter br = new BufferedWriter(new FileWriter(file, true));
+        br.write(
+                fullNamesTextField.getText() + "#" + surnameTextField.getText()  + "#" + Integer.parseInt(studentNumberTextField.getText()) + "#" + courseName + "#" + passwordTextField.getText() + "#" + resName + "\n"
+        );
+        br.close();
         //creates logic instance
         Logic logic = new Logic();
 
+        //debug purposes
         //checks if the student is on the list, if the student is not found on the list then registers else not register
         if (logic.checkRegistered(student)) {
             System.out.println("already registered");
         } else {
+            switchToProfileScreen(event);
             System.out.println("registered");
         }
 
-        //for debugging purposes, list all students
-        logic.getList();
-        switchToProfileScreen(event);
+      //  switchToProfileScreen(event);
     }
 
     //gets a res name from the combo box
@@ -76,11 +99,15 @@ public class RegisterPageController implements Initializable {
         resName = comboBox.getValue();
     }
 
+    public void getCourseName(ActionEvent event){
+        courseName = comboBoxCourses.getValue();
+    }
+
 
     public void switchToHelloScreen(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
@@ -102,10 +129,8 @@ public class RegisterPageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         comboBox.getItems().addAll(reses);
+        comboBoxCourses.getItems().addAll(courses);
         comboBox.setOnAction(this::getResName);
-    }
-
-    public Student getStudent() {
-        return student;
+        comboBoxCourses.setOnAction(this::getCourseName);
     }
 }
