@@ -20,6 +20,7 @@ public class LoginController {
     private Parent root;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // checks if the pass and stud num is correct
     public void login(ActionEvent event) throws IOException {
         Logic logic = new Logic();
@@ -35,6 +36,11 @@ public class LoginController {
             alert.setContentText("The student number or password you entered is incorrect.");
             alert.showAndWait();
         }
+=======
+    @FXML
+    protected void onHelloButtonClick() {
+        welcomeText.setText("Welcome to JavaFX Application!");
+>>>>>>> parent of f894385 (Added Registration Logic)
 =======
     @FXML
     protected void onHelloButtonClick() {

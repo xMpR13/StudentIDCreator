@@ -8,6 +8,7 @@ public class Logic {
     public Logic() {
         //must load list from a file and add to the list arraylist
 <<<<<<< HEAD
+<<<<<<< HEAD
         File file = new File("students.txt");
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         String str = "";
@@ -51,6 +52,8 @@ public class Logic {
                 list.get(index).getPassword(),
                 list.get(index).getResName()
         );
+=======
+>>>>>>> parent of f894385 (Added Registration Logic)
 =======
 >>>>>>> parent of f894385 (Added Registration Logic)
     }

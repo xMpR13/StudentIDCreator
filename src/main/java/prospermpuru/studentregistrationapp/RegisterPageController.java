@@ -69,7 +69,13 @@ public class RegisterPageController implements Initializable {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+        //for debugging purposes, list all students
+        logic.getList();
+        switchToProfileScreen(event);
+>>>>>>> parent of f894385 (Added Registration Logic)
 =======
         //for debugging purposes, list all students
         logic.getList();
