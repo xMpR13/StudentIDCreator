@@ -91,7 +91,7 @@ public class RegisterPageController implements Initializable {
             System.out.println("registered");
         }
 
-      //  switchToProfileScreen(event);
+        switchToProfileScreen(event);
     }
 
     //gets a res name from the combo box

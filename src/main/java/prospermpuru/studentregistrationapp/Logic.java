@@ -20,7 +20,7 @@ public class Logic {
             int student_number = Integer.parseInt(details[2]);
             String course = details[3];
             String password = details[4];
-            String res = details[1];
+            String res = details[5];
             Student s = new Student(
                     name,
                     surname,
@@ -30,10 +30,6 @@ public class Logic {
                     res
             );
             list.add(s);
-        }
-
-        for (int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i).toString());
         }
     }
 
@@ -67,12 +63,5 @@ public class Logic {
         }
         list.add(stud);
         return false;
-    }
-
-    //for debugging purposes, gets all the students in the list
-    public void getList(){
-        for (int i = 0; i < list.size(); i++){
-            System.out.println("Name: " + list.get(i).getName() + ", surname: " + list.get(i).getSurname());
-        }
     }
 }

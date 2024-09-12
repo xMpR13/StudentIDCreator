@@ -33,7 +33,6 @@ public class LoginController {
         if (logic.login(password.getText(), studentNum)) {
             student = logic.getStudent();
             switchToProfileScreen(event);
-            System.out.println("Logged in");
         } else {
             alert.setAlertType(Alert.AlertType.WARNING);
             alert.setTitle("Login Error");
