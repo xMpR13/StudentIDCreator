@@ -1,35 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prospermpuru.studentregistrationapp.HelloView">
    <children>
-      <Text layoutX="326.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" underline="true" wrappingWidth="186.26953125">
+      <VBox layoutX="22.0" layoutY="48.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="DAMSCA" underline="true">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/student_2.png" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The purpose of a student registration form is to collect important" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="information about a student in order to enroll them" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="in a school, college, or university" />
+         </children>
+      </VBox>
+      <Button layoutX="402.0" layoutY="174.0" mnemonicParsing="false" onAction="#switchToLoginScreen" prefHeight="26.0" prefWidth="98.0" text="Log in" textAlignment="CENTER" />
+      <Button layoutX="516.0" layoutY="174.0" mnemonicParsing="false" onAction="#switchToRegisterScreen" prefHeight="26.0" prefWidth="75.0" text="Sign Up" />
+      <Text layoutX="433.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" textAlignment="CENTER" underline="true">
          <font>
-            <Font size="48.0" />
+            <Font size="28.0" />
          </font>
       </Text>
-      <TextField layoutX="326.0" layoutY="181.0" />
-      <Text layoutX="326.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student number" />
-      <Text layoutX="326.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
-      <PasswordField layoutX="326.0" layoutY="248.0" />
-      <Button layoutX="326.0" layoutY="284.0" mnemonicParsing="false" text="Login" />
-      <Text layoutX="326.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?" />
-      <ImageView fitHeight="150.0" fitWidth="186.0" layoutX="62.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/student.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="89.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="App name" />
-      <Hyperlink layoutX="454.0" layoutY="332.0" text="sign up" />
    </children>
 </AnchorPane>
