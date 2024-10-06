@@ -23,11 +23,12 @@ The **Student Registration App** is a JavaFX-based application designed to manag
 - Java Development Kit (JDK) 11 or higher
 - JavaFX SDK
 
-Student picture -> Student icons created by Freepik - Flaticon <br>
-Student picture 2 -> University icons created by Freepik - Flaticon<br>
-Sign up -> Sign up icons created by Flat Icons - Flaticon<br>
-Student picture 3 -> University icons created by Freepik - Flaticon<br>
-Bar code -> Mark PNGs by Vecteezy<br>
+## Credit
+Student picture -> <a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Freepik - Flaticon</a> <br>
+student picture 2 -> <a href="https://www.flaticon.com/free-icons/university" title="university icons">University icons created by Freepik - Flaticon</a> <br>
+sign up -> <a href="https://www.flaticon.com/free-icons/sign-up" title="sign up icons">Sign up icons created by Flat Icons - Flaticon</a> <br>
+student picture 3 -> <a href="https://www.flaticon.com/free-icons/university" title="university icons">University icons created by Freepik - Flaticon</a> <br>
+bar code -> <a href="https://www.vecteezy.com/free-png/mark">Mark PNGs by Vecteezy</a> <br>
 
 
 ## How to Run
