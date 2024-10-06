@@ -1,7 +1,7 @@
-# Student Registration App
+# StudentID Creator
 
 ## Overview
-The **Student Registration App** is a JavaFX-based application designed to manage student registrations. It provides functionalities such as user login, registration, profile management, and viewing student details.
+The **StudentID Creator** is a JavaFX-based application designed to manage student registrations. It provides functionalities such as user login, registration, profile management, and viewing student details.
 
 ## Features
 - User Authentication (Login/Sign-up)
