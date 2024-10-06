@@ -1,5 +1,7 @@
 package prospermpuru.studentregistrationapp;
 
+import javafx.scene.control.Alert;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -9,6 +11,7 @@ import java.util.ArrayList;
 public class Logic {
     private final ArrayList<Student> list = new ArrayList<>();
     private int index;
+    private final Alert alert = new Alert(Alert.AlertType.NONE);
 
     public Logic() throws IOException {
         //must load list from a file and add to the list arraylist
@@ -70,5 +73,13 @@ public class Logic {
         }
         list.add(stud);
         return false;
+    }
+
+    public void error_pop_up(String title, String header, String content_text){
+        alert.setAlertType(Alert.AlertType.WARNING);
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content_text);
+        alert.showAndWait();
     }
 }

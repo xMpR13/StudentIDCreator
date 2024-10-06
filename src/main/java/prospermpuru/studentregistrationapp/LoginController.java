@@ -2,7 +2,6 @@ package prospermpuru.studentregistrationapp;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -14,7 +13,7 @@ public class LoginController {
     @FXML
     private TextField student_number;
 
-    private final Alert alert = new Alert(Alert.AlertType.NONE);
+
     private Student student = null;
     SceneManager sceneManager = new SceneManager();
 
@@ -28,11 +27,7 @@ public class LoginController {
             switchToProfileScreen(event);
             System.out.println("Logged in");
         } else {
-            alert.setAlertType(Alert.AlertType.WARNING);
-            alert.setTitle("Login Error");
-            alert.setHeaderText("Invalid Credentials");
-            alert.setContentText("The student number or password you entered is incorrect.");
-            alert.showAndWait();
+            logic.error_pop_up("Login Error", "Invalid Credentials", "The student number or password you entered is incorrect.");
         }
     }
 

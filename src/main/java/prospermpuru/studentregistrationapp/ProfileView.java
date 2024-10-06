@@ -40,6 +40,6 @@ public class ProfileView implements Initializable {
     }
 
     public void switchToHelloScreen(ActionEvent event) throws IOException {
-        sceneManager.switch_scene(event, "hello-view.fxml", student);
+        sceneManager.switch_scene(event, "hello-view.fxml", null);
     }
 }
