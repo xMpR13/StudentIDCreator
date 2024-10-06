@@ -34,3 +34,20 @@ Bar code -> Mark PNGs by Vecteezy<br>
 1. Clone the repository:
    ```bash
    git clone https://github.com/xMpR13/student-registration-app.git
+
+### Screenshots
+
+Welcome interface <br>
+<img src="screenshots/hello-view.jpg" alt="Hello View" width="25%" height="auto"> <br>
+
+Registration interface<br>
+<img src="screenshots/register-view.jpg" alt="Register View" width="25%" height="auto"><br>
+
+Login interface<br>
+<img src="screenshots/login-view.jpg" alt="Login View" width="25%" height="auto"><br>
+
+Student profile interface<br>
+<img src="screenshots/profile-view.jpg" alt="Profile View" width="25%" height="auto"><br>
+
+Error popup<br>
+<img src="screenshots/error-popup.jpg" alt="Error Popup" width="25%" height="auto"><br>

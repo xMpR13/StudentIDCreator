@@ -21,8 +21,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class RegisterPageController implements Initializable {
-    @FXML
-    private Button signUpBtn;
+
     @FXML
     private TextField fullNamesTextField;
     @FXML

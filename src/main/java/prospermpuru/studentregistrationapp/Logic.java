@@ -14,30 +14,30 @@ public class Logic {
         //must load list from a file and add to the list arraylist
         File file = new File("students.txt");
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-        String str = "";
+        String str;
 
         while((str = bufferedReader.readLine()) != null){
-            String[] details = str.split("#");
-            String name = details[0];
-            String surname = details[1];
-            int student_number = Integer.parseInt(details[2]);
-            String course = details[3];
-            String password = details[4];
-            String res = details[5];
-            Student s = new Student(
-                    name,
-                    surname,
-                    student_number,
-                    course,
-                    password,
-                    res
-            );
+            Student s = getStudent(str);
             list.add(s);
         }
+    }
 
-        for (int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i).toString());
-        }
+    private static Student getStudent(String str) {
+        String[] details = str.split("#");
+        String name = details[0];
+        String surname = details[1];
+        int student_number = Integer.parseInt(details[2]);
+        String course = details[3];
+        String password = details[4];
+        String res = details[5];
+        return new Student(
+                name,
+                surname,
+                student_number,
+                course,
+                password,
+                res
+        );
     }
 
     public boolean login(String password, int student_number) {
@@ -63,19 +63,12 @@ public class Logic {
 
     //checks if the student is registered or not
     public boolean checkRegistered(Student stud){
-        for(int i = 0; i < list.size(); i++) {
-            if (stud.getStudentNumber() == list.get(i).getStudentNumber()){
+        for (Student student : list) {
+            if (stud.getStudentNumber() == student.getStudentNumber()) {
                 return true;
             }
         }
         list.add(stud);
         return false;
-    }
-
-    //for debugging purposes, gets all the students in the list
-    public void getList(){
-        for (int i = 0; i < list.size(); i++){
-            System.out.println("Name: " + list.get(i).getName() + ", surname: " + list.get(i).getSurname());
-        }
     }
 }
